@@ -3,3 +3,7 @@
 [ ] conda install -c anaconda scikit-learn
 [ ] conda install -c weiyan scikit-audiolab 
 [ ] conda install -c anaconda scipy
+[^] conda install -c conda-forge keras
+[^] conda create -n tf-gpu tensorflow-gpu
+    conda activate tf-gpu
+[^]
