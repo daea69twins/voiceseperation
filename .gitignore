@@ -14,3 +14,12 @@ ML_data_preparation/.ipynb_checkpoints/clip_arrays_to_training_data-checkpoint.i
 ML_data_preparation/.ipynb_checkpoints/clip_arrays_to_training_data-checkpoint.ipynb
 ML_data_preparation/.ipynb_checkpoints/ratio_mask_stuff_sandbox-checkpoint.ipynb
 ML_data_preparation/.ipynb_checkpoints/clip_arrays_to_training_data-checkpoint.ipynb
+*.wav
+*.csv
+*.yaml
+*.0
+ML_data_preparation/.ipynb_checkpoints/asteroid_getting_started_sandbox-checkpoint.ipynb
+ML_data_preparation/.ipynb_checkpoints/asteroid_sandbox-checkpoint.ipynb
+ML_data_preparation/.ipynb_checkpoints/nussl_sandbox-checkpoint.ipynb
+ML_data_preparation/.ipynb_checkpoints/ratio_stuff_model_sandbox-checkpoint.ipynb
+ML_data_preparation/MiniLibriMix/MiniLibriMix.zip
