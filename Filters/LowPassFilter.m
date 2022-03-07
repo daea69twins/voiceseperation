@@ -21,3 +21,13 @@ title('original signal')
 subplot(3,1,2)
 plot(y)
 title('filtered signal')
+
+%different implementation approach to find frequency of different audio
+%files
+[y,fs]=audioread('    ');
+t=linspace(0,length(y)/fs,length(y));
+plot(t,y);
+Nfft=1024;
+f=linspace(0,fs,Nfft);
+G=abs(fft(y,Nfft));
+figure ; plot(f(1:Nfft/2),G(1:Nfft/2));
