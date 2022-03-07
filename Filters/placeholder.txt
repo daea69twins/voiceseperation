@@ -1,0 +1,4 @@
+First Implemented a Lowpass filter to see if we could potentially just get a filter running. 
+	Low pass filter was not very effective with filtering out any audible noise 
+Additionally, Farfan implemented a bandpass filter that essentially filtered out noise
+
