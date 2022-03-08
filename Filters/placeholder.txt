@@ -1,0 +1,9 @@
+First Implemented a Lowpass filter to see if we could potentially just get a filter running. 
+	Low pass filter was not very effective with filtering out any audible noise 
+Additionally, Farfan implemented a bandpass filter that essentially filtered out noise
+https://www.youtube.com/watch?v=kCRTsv3WALg
+https://www.mathworks.com/matlabcentral/answers/506350-separate-voice-from-background-music
+https://www.mathworks.com/help/audio/ref/pitch.html
+https://www.mathworks.com/matlabcentral/answers/644508-finding-fundamental-frequency-of-an-audio-signal
+https://www.mathworks.com/matlabcentral/answers/520464-how-do-i-calculate-the-sound-frequency-of-a-wav-file-or-multiple-files
+
