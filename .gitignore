@@ -25,3 +25,4 @@ ML_data_preparation/.ipynb_checkpoints/ratio_stuff_model_sandbox-checkpoint.ipyn
 ML_data_preparation/MiniLibriMix/MiniLibriMix.zip
 ML_data_preparation/.ipynb_checkpoints/custom_dataset_sandbox-checkpoint.ipynb
 *.pyc
+ML_data_preparation/lightning_logs/version_7/events.out.tfevents.1646706053.DESKTOP-48P8UME.24140.1

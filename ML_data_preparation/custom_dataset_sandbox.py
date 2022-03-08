@@ -101,6 +101,12 @@ class CustomMixture(Dataset):
         sources = np.vstack(sources_list)
         # Convert sources to tensor
         sources = torch.from_numpy(sources)
+        print("sources.shape:", sources.shape)
+        sources = np.swapaxes(sources, 0, 1)
+        mixture = np.swapaxes(mixture, 0, 1)
+
+        print("sources.shape:", sources.shape)
+
         
         return mixture, sources
 
