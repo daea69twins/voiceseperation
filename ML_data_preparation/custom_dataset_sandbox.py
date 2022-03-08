@@ -73,6 +73,8 @@ class CustomMixture(Dataset):
     
 
     def __getitem__(self, idx):
+        print("IN __getitem__()")
+
         # Get the row in dataframe
         row = self.df.iloc[idx]
         
@@ -91,21 +93,30 @@ class CustomMixture(Dataset):
         source_path = row["source_other_path"]
         s, _ = sf.read(source_path, dtype="float32", start=start, stop=stop)
         sources_list.append(s)
+
+        print("READ METADATA COMPLETE")
             
         # Read the mixture
         mixture, _ = sf.read(mixture_path, dtype="float32", start=start, stop=stop)
+
+        print("READ MIXTURE COMPLETE")
+
         # Convert to torch tensor
         mixture = torch.from_numpy(mixture)
         
         # Stack sources (this puts the sources in the same array, but does not combine them)
         sources = np.vstack(sources_list)
-        # Convert sources to tensor
-        sources = torch.from_numpy(sources)
         print("sources.shape:", sources.shape)
         sources = np.swapaxes(sources, 0, 1)
-        mixture = np.swapaxes(mixture, 0, 1)
-
         print("sources.shape:", sources.shape)
+        # Convert sources to tensor
+        sources = torch.from_numpy(sources)
+        # print("sources.shape:", sources.shape)
+        # sources = np.swapaxes(sources, 0, 1)
+        # mixture = np.swapaxes(mixture, 0, 1)
+
+        
+        
 
         
         return mixture, sources

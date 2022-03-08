@@ -26,3 +26,15 @@ ML_data_preparation/MiniLibriMix/MiniLibriMix.zip
 ML_data_preparation/.ipynb_checkpoints/custom_dataset_sandbox-checkpoint.ipynb
 *.pyc
 ML_data_preparation/lightning_logs/version_7/events.out.tfevents.1646706053.DESKTOP-48P8UME.24140.1
+ML_data_preparation/lightning_logs/version_12/events.out.tfevents.1646707160.DESKTOP-48P8UME.8728.1
+ML_data_preparation/lightning_logs/version_14/events.out.tfevents.1646707359.DESKTOP-48P8UME.22260.1
+ML_data_preparation/lightning_logs/version_15/events.out.tfevents.1646707498.DESKTOP-48P8UME.22260.2
+ML_data_preparation/lightning_logs/version_19/events.out.tfevents.1646708127.DESKTOP-48P8UME.22760.1
+ML_data_preparation/lightning_logs/version_21/events.out.tfevents.1646708330.DESKTOP-48P8UME.22640.1
+ML_data_preparation/lightning_logs/version_22/events.out.tfevents.1646708361.DESKTOP-48P8UME.22640.2
+ML_data_preparation/lightning_logs/version_24/events.out.tfevents.1646771389.DESKTOP-48P8UME.14548.1
+ML_data_preparation/lightning_logs/version_25/events.out.tfevents.1646771852.DESKTOP-48P8UME.14548.2
+ML_data_preparation/lightning_logs/version_27/events.out.tfevents.1646772470.DESKTOP-48P8UME.8744.1
+ML_data_preparation/lightning_logs/version_30/events.out.tfevents.1646772680.DESKTOP-48P8UME.9484.1
+ML_data_preparation/lightning_logs/version_31/events.out.tfevents.1646773072.DESKTOP-48P8UME.9484.2
+ML_data_preparation/lightning_logs/version_33/events.out.tfevents.1646773229.DESKTOP-48P8UME.19368.1
