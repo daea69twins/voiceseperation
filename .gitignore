@@ -24,3 +24,4 @@ ML_data_preparation/.ipynb_checkpoints/nussl_sandbox-checkpoint.ipynb
 ML_data_preparation/.ipynb_checkpoints/ratio_stuff_model_sandbox-checkpoint.ipynb
 ML_data_preparation/MiniLibriMix/MiniLibriMix.zip
 ML_data_preparation/.ipynb_checkpoints/custom_dataset_sandbox-checkpoint.ipynb
+*.pyc
