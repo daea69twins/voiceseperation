@@ -102,13 +102,14 @@ class CustomMixture(Dataset):
         print("READ MIXTURE COMPLETE")
 
         # Convert to torch tensor
+        print("mixture.shape:", mixture.shape)
         mixture = torch.from_numpy(mixture)
         
         # Stack sources (this puts the sources in the same array, but does not combine them)
         sources = np.vstack(sources_list)
         print("sources.shape:", sources.shape)
-        sources = np.swapaxes(sources, 0, 1)
-        print("sources.shape:", sources.shape)
+        # sources = np.swapaxes(sources, 0, 1)
+        # print("sources.shape:", sources.shape)
         # Convert sources to tensor
         sources = torch.from_numpy(sources)
         # print("sources.shape:", sources.shape)
