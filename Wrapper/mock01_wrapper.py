@@ -1,6 +1,18 @@
 import pyaudio
 import wave
 
+# from .ipynb
+import noisereduce as nr
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+import librosa
+import librosa.display
+import IPython.display as ipd
+import matplotlib.pyplot as plt
+from pydub import AudioSegment
+import soundfile as sf
+from torch import hub
+
 # the file name output you want to record into
 filename = "recorded.wav"
 # set the chunk size of 1024 samples
