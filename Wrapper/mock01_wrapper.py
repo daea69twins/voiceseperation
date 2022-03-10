@@ -16,10 +16,17 @@ import soundfile as sf
 from torch import hub
 
 # ---------------------------------------------------
+# path variables
+file = "recorded" # file with no extension
+filepath = "./"
+stream1_filename = "voice1.wav"
+stream2_filename = "voice2.wav"
+
+# ---------------------------------------------------
 # recording audio file from board
 
 # the file name output you want to record into
-file = "recorded"
+# file = "recorded"
 filename = file + ".wav"
 # set the chunk size of 1024 samples
 chunk = 1024
@@ -68,7 +75,7 @@ wf.close()
 # ---------------------------------------------------
 # splitting and noise reducing
 
-filepath = "./"
+#filepath = "./"
 # load data
 data, rate = librosa.load(filename)
 
@@ -81,14 +88,14 @@ model.separate(audio_filepath, resample=True, force_overwrite=True)
 s1_filename = file + '_est1.wav'
 s1, rate = librosa.load(filepath+s1_filename)
 reduced_noise1 = nr.reduce_noise(y=s1, sr=rate)
-voice1_file = filepath + 'voice1.wav'
+voice1_file = filepath + stream1_filename
 sf.write(voice1_file, reduced_noise1, rate)
 
 # audio stream 2
 s2_filename = file + '_est2.wav'
 s2, rate = librosa.load(filepath+s2_filename)
 reduced_noise2 = nr.reduce_noise(y=s2, sr=rate)
-voice2_file = filepath + 'voice2.wav'
+voice2_file = filepath + stream2_filename
 sf.write(voice2_file, reduced_noise2, rate)
 
 # normalize audio streams
@@ -105,6 +112,10 @@ normalized2.export(voice2_file, format='wav')
 # ---------------------------------------------------
 # playback
 
-AudioPlayer("./recorded.wav").play(block=True)
-AudioPlayer("./voice1.wav").play(block=True)
-AudioPlayer("./voice2.wav").play(block=True)
+AudioPlayer(audio_filepath).play(block=True)
+AudioPlayer(voice1_file).play(block=True)
+AudioPlayer(voice2_file).play(block=True)
+
+# AudioPlayer("./recorded.wav").play(block=True)
+# AudioPlayer("./voice1.wav").play(block=True)
+# AudioPlayer("./voice2.wav").play(block=True)
