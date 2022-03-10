@@ -1,5 +1,7 @@
+# imports
 import pyaudio
 import wave
+from audioplayer import AudioPlayer
 
 # from .ipynb
 import noisereduce as nr
@@ -9,9 +11,10 @@ import librosa
 import librosa.display
 import IPython.display as ipd
 import matplotlib.pyplot as plt
-from pydub import AudioSegment
 import soundfile as sf
-from torch import hub
+
+# ---------------------------------------------------
+# recording audio file from board
 
 # the file name output you want to record into
 filename = "recorded.wav"
@@ -21,8 +24,8 @@ chunk = 1024
 FORMAT = pyaudio.paInt16
 # mono, change to 2 if you want stereo
 channels = 1
-# 44100 samples per second
-sample_rate = 44100
+# 22050 samples per second
+sample_rate = 22050
 record_seconds = 5
 # initialize PyAudio object
 p = pyaudio.PyAudio()
@@ -57,3 +60,15 @@ wf.setframerate(sample_rate)
 wf.writeframes(b"".join(frames))
 # close the file
 wf.close()
+
+
+# ---------------------------------------------------
+# splitting and noise reducing
+
+
+# ---------------------------------------------------
+# playback
+
+AudioPlayer("./recorded.wav").play(block=True)
+AudioPlayer("./split1.wav").play(block=True)
+AudioPlayer("./split2.wav").play(block=True)
