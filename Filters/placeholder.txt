@@ -6,4 +6,5 @@ https://www.mathworks.com/matlabcentral/answers/506350-separate-voice-from-backg
 https://www.mathworks.com/help/audio/ref/pitch.html
 https://www.mathworks.com/matlabcentral/answers/644508-finding-fundamental-frequency-of-an-audio-signal
 https://www.mathworks.com/matlabcentral/answers/520464-how-do-i-calculate-the-sound-frequency-of-a-wav-file-or-multiple-files
+https://stackoverflow.com/questions/66401752/how-to-get-sound-from-pdm-microphone-on-google-coral-dev-board-mini
 
