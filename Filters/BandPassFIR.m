@@ -29,3 +29,5 @@ title('original signal')
 subplot(3,1,2)
 plot(y)
 title('filtered signal')
+pause();
+
