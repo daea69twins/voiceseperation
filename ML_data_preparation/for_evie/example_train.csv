@@ -1,0 +1,4 @@
+,mixture_path,source_char_path,source_other_path
+1,MiniLibriMix/train/mix_both/5400-34479-0005_4973-24515-0007.wav,MiniLibriMix/train/s1/5400-34479-0005_4973-24515-0007.wav,MiniLibriMix/train/s2/5400-34479-0005_4973-24515-0007.wav
+2,MiniLibriMix/train/mix_both/3876-174960-0020_7555-101283-0054.wav,MiniLibriMix/train/s1/3876-174960-0020_7555-101283-0054.wav,MiniLibriMix/train/s2/3876-174960-0020_7555-101283-0054.wav
+3,MiniLibriMix/train/mix_both/3025-12971-0034_781-127518-0038.wav,MiniLibriMix/train/s1/3025-12971-0034_781-127518-0038.wav,MiniLibriMix/train/s2/3025-12971-0034_781-127518-0038.wav
