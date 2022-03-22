@@ -80,6 +80,7 @@ system = System(model, optimizer, loss, train_loader, val_loader)
 trainer = Trainer(max_epochs=1, gpus=1, auto_select_gpus=True)
 # maybe look into this link?:
 # https://stackoverflow.com/questions/64837376/how-to-efficiently-run-multiple-pytorch-processes-models-at-once-traceback
+# maybe need to make sure the DataLoader opens to the GPU?
 
 # trainer = Trainer()
 import gc
