@@ -27,6 +27,9 @@ from asteroid.engine import System
 from custom_dataset_sandbox import CustomMixture
 
 from torch.utils.data import DataLoader
+# import torch
+import gc
+gc.collect()
 
 
 # In[2]:
@@ -37,8 +40,12 @@ from torch.utils.data import DataLoader
 
 # train_loader, val_loader = LibriMix.mini_from_download(task="sep_clean")#, {"num_workers": 8})
 csv_path = "C:/Users/ZaknafeinII/Desktop/University_of_Iowa/4_Senior/Spring/ECE4890_SD/voiceseperation/ML_data_preparation/MiniLibriMix/metadata"
-train_loader = DataLoader(CustomMixture(csv_path, "example_train"), num_workers=4, batch_size=1)
-val_loader = DataLoader(CustomMixture(csv_path, "example_val"), num_workers=4, batch_size=1)
+nw = 1
+bs = 1
+# torch.backends.cudnn.benchmark = True
+print("nw =", nw, "bs =", bs)
+train_loader = DataLoader(CustomMixture(csv_path, "example_train"), num_workers=nw, batch_size=1)
+val_loader = DataLoader(CustomMixture(csv_path, "example_val"), num_workers=nw, batch_size=1)
 
 # train_loader = LibriMix("C:/Users/ZaknafeinII/Desktop/University_of_Iowa/4_Senior/Spring/ECE4890_SD/voiceseperation/ML_data_preparation/MiniLibriMix/metadata/test_libri/", task="sep_clean", sample_rate=16000, n_src=2, segment=3, return_id=False)
 # val_loader = LibriMix("C:/Users/ZaknafeinII/Desktop/University_of_Iowa/4_Senior/Spring/ECE4890_SD/voiceseperation/ML_data_preparation/MiniLibriMix/metadata/test_libri/", task="sep_clean", sample_rate=16000, n_src=2, segment=3, return_id=False)
@@ -78,12 +85,13 @@ system = System(model, optimizer, loss, train_loader, val_loader)
 # be sure to select a GPU runtime (Runtime → Change runtime type → Hardware accelarator).
 # trainer = Trainer(max_epochs=1, gpus=0, auto_select_gpus=False, log_every_n_steps=1)
 trainer = Trainer(max_epochs=1, gpus=1, auto_select_gpus=True)
+# trainer = Trainer(max_epochs=1, gpus=0, auto_select_gpus=False)
+
 # maybe look into this link?:
 # https://stackoverflow.com/questions/64837376/how-to-efficiently-run-multiple-pytorch-processes-models-at-once-traceback
 # maybe need to make sure the DataLoader opens to the GPU?
 
 # trainer = Trainer()
-import gc
 gc.collect()
 # trainer = Trainer(log_every_n_steps=1)
 trainer.fit(system)
