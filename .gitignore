@@ -42,3 +42,4 @@ ML_data_preparation/lightning_logs/version_43/events.out.tfevents.1646777183.DES
 ML_data_preparation/lightning_logs/version_50/events.out.tfevents.1646949745.DESKTOP-48P8UME.14404.1
 ML_data_preparation/lightning_logs/version_47/events.out.tfevents.1646949091.DESKTOP-48P8UME.12724.1
 ML_data_preparation/.ipynb_checkpoints/clip_arrays_to_training_data_for_ConvTasNet-checkpoint.ipynb
+ML_data_preparation/.ipynb_checkpoints/waves_to_clip_arrays_for_ConvTasNet-checkpoint.ipynb
