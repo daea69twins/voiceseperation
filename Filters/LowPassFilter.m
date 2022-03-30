@@ -31,3 +31,6 @@ Nfft=1024;
 f=linspace(0,fs,Nfft);
 G=abs(fft(y,Nfft));
 figure ; plot(f(1:Nfft/2),G(1:Nfft/2));
+
+
+% this is to test my github DP
