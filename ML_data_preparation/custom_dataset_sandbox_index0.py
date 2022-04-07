@@ -88,14 +88,9 @@ class CustomMixture(Dataset):
 
         # Read sources
         source_path = row["clean_path"]
-        s, _ = sf.read(source_path, dtype="float32", start=start, stop=stop)
+        clean, _ = sf.read(source_path, dtype="float32", start=start, stop=stop)
         #print("Read %s correctly" % (source_path))
-        sources_list.append(s)
-        source_path = row["noise_path"]
-        source_path = row["noise_path"]
-        s, _ = sf.read(source_path, dtype="float32", start=start, stop=stop)
-        #print("Read %s correctly" % (source_path))
-        sources_list.append(s)
+       
 
         #print("READ METADATA COMPLETE")
 
@@ -110,9 +105,9 @@ class CustomMixture(Dataset):
         mixture = torch.from_numpy(mixture)
 
         # Stack sources (this puts the sources in the same array, but does not combine them)
-        sources = np.vstack(sources_list)
+        sources = np.vstack([clean])
         #print("sources.shape:", sources.shape)
-        # sources = np.swapaxes(sources, 0, 1)
+        #sources = np.swapaxes(sources, 0, 1)
         # print("sources.shape:", sources.shape)
         # Convert sources to tensor
         sources = torch.from_numpy(sources)
