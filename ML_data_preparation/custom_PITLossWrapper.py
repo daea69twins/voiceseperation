@@ -29,8 +29,8 @@ class PITLossWrapper_index0(PITLossWrapper):
         losses using broadcasting.
         """
 		
-		est_targets = est_targets[0]
-		targets = targets[0]
+        est_targets = est_targets[0]
+        targets = targets[0]
 		
         batch_size, n_src, *_ = targets.shape
         pair_wise_losses = targets.new_empty(batch_size, n_src, n_src)
