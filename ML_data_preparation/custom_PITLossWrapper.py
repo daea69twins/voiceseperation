@@ -2,7 +2,7 @@ from itertools import permutations
 import torch
 from torch import nn
 from scipy.optimize import linear_sum_assignment
-import PITLossWrapper
+from asteroid.losses import PITLossWrapper
 
 class PITLossWrapper_index0(PITLossWrapper):
     @staticmethod
@@ -28,13 +28,14 @@ class PITLossWrapper_index0(PITLossWrapper):
         of size :math:`(batch)`. There are more efficient ways to compute pair-wise
         losses using broadcasting.
         """
-		
-        est_targets = est_targets[0]
-        targets = targets[0]
-		
+        print(est_targets.shape)
+        print(est_targets[0].shape)
+        print(est_targets)
         batch_size, n_src, *_ = targets.shape
+        n_src = 1
+		
         pair_wise_losses = targets.new_empty(batch_size, n_src, n_src)
-        for est_idx, est_src in enumerate(est_targets.transpose(0, 1)):
-            for target_idx, target_src in enumerate(targets.transpose(0, 1)):
+        for est_idx, est_src in enumerate(est_targets[0].transpose(0, 1)):
+            for target_idx, target_src in enumerate(targets[0].transpose(0, 1)):
                 pair_wise_losses[:, est_idx, target_idx] = loss_func(est_src, target_src, **kwargs)
         return pair_wise_losses
