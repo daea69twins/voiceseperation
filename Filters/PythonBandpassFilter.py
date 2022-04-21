@@ -6,6 +6,15 @@ sys.path.insert(0,'/content/drive/My Drive')
 #from custom_dataset_sandbox import CustomMixture 
 
 
+!pip install librosa
+import librosa
+!pip install numpy
+import numpy as np 
+!pip install matplotlib
+import matplotlib.pyplot as plt 
+from scipy import signal 
+
+
 
 from scipy.signal import butter, lfilter
 
