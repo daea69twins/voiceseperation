@@ -1,3 +1,12 @@
+# import custom data set from py in google drive
+from google.colab import drive
+drive.mount('/content/drive')
+import sys
+sys.path.insert(0,'/content/drive/My Drive')
+#from custom_dataset_sandbox import CustomMixture 
+
+
+
 from scipy.signal import butter, lfilter
 
 def butter_bandpass(lowcut, highcut, fs, order=5):
@@ -62,4 +71,3 @@ def run():
     plt.legend(loc='upper left')
 
     plt.show()
-
