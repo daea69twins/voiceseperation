@@ -1,0 +1,15 @@
+How to switch GColab to a GPU runtime:
+"If the execution result of running the code cell below is "Not connected to a GPU", you can change the runtime by going to Runtime > Change runtime type in the menu to enable a GPU accelerator, and then re-execute the code cell."
+
+How to get stats on the virtual machine's GPU:
+gpu_info = !nvidia-smi
+gpu_info = '\n'.join(gpu_info)
+if gpu_info.find('failed') >= 0:
+  print('Not connected to a GPU')
+else:
+  print(gpu_info)
+
+With our Pro+ plan, we were allocated a P100 GPU with ~17GB of GPU RAM. My local GPU has ~4GB.
+We saw a single trial epoch go from taking 216 minutes with the free plan to 58 minutes with the Pro+ plan. This is an improvement of 3.72x.
+
+After 1/100 epochs, we saw fair voice separation for a pool of 2 voices, and mediocre separation for pools of 3 and 4 voices. However, the separated audio streams sounded better than expected for only a single epoch.

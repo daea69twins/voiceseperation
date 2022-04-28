@@ -120,3 +120,5 @@ def main():
     # AudioPlayer("./recorded.wav").play(block=True)
     # AudioPlayer("./voice1.wav").play(block=True)
     # AudioPlayer("./voice2.wav").play(block=True)
+
+main()
