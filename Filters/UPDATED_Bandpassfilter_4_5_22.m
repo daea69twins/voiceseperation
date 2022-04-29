@@ -29,4 +29,8 @@ title('original signal')
 subplot(3,1,2)
 plot(y)
 title('filtered signal')
-sound(y,Fs)
+
+filename ='C:\Users\dpaya\GitHub\voiceseperation\Filters\test55.wav';
+audiowrite(filename,y,Fs);
+
+%sound(y,Fs)
