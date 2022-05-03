@@ -1,4 +1,4 @@
-[x,Fs] = audioread('PlaneWspeech.wav');
+[x,Fs] = audioread('overlay_with_noise.wav');
 Fstop1 = 100;
 Fpass1 = 300;
 Fpass2 = 2000;
@@ -31,3 +31,4 @@ plot(y)
 title('filtered signal')
 pause();
 
+soundsc(y,Fs)
